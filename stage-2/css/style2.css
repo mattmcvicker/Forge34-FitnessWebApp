@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Sets sizing of the page on mobile applications  */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #1f2833;
+    height: inherit;
+}
+
+.big-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Flex container for the entire body of the page */
+
+.flex-container-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.flex-item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.fi-one {
+    flex-grow: 0;
+    flex-basis: 70px;
+    background-color: #171e26;
+}
+
+.fi-one h1 {
+    font-family: 'Oswald', sans-serif;
+    font-style: bold;
+    color: #66fcf1;
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
+
+/* General picture formatting */
+
+.picture {
+    background-position: center;
+    background-size: cover;
+    border: 17px solid #1f2833;
+    flex-basis: 100px;
+}
+
+/* Formatting for the nutrition specific portion of the page */
+
+.nutrition {
+    background-image: url("../img/food-sm.jpg");
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+/* Formatting for the workout spcific portion of the page */
+
+.workout {
+    background-image: url("../img/workout-sm.jpg");
+    border-top: 0;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+/* Formatting the black bars that appear on the nutrition and workout sections */
+
+.black-bar {
+    height: 25%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .60);
+    position: absolute;
+}
+
+.black-bar h2 {
+    font-size: 4vh;
+    color: rgb(231, 231, 231);
+    position: absolute;
+    left: 10px;
+}
+
+.nutrition .black-bar {
+    top: 0;
+}
+
+.nutrition .black-bar h2 {
+    top: 25%;
+}
+
+.workout .black-bar {
+    bottom: 0;
+}
+
+.workout .black-bar h2 {
+    bottom: 25%;
+}
+
+/* Design for the webpage. Flex boxes are flipped to account for screen size */
+
+@media (min-width: 992px) {
+    .big-flex {
+        flex-direction: row;
+    }
+    .flex-container-body {
+        flex-direction: row;
+    }
+    .fi-one {
+        text-align: center;
+    }
+    .fi-one h1 {
+        transform: rotate(-90deg);
+        font-size: 108px;
+        margin-top: 100%;
+        margin-left: -100px;
+        margin-right: -92px;
+    }
+    .picture {
+        border: 0;
+    }
+    .black-bar {
+        top: 0;
+        min-height: 120px;
+    }
+    .black-bar h2 {
+        font-size: 5rem;
+    }
+    .nutrition {
+        border-radius: 0;
+        background-image: url("../img/food.jpg");
+    }
+    .workout {
+        border-left: 5px solid black;
+        border-radius: 0;
+        background-image: url("../img/workout.jpg");
+    }
+    .workout .black-bar h2 {
+        top: 25%
+    }
+}
