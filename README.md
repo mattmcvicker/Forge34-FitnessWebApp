@@ -1,7 +1,7 @@
 # Forge34
 
 This was a small project from a front-end development class I took my junior year of college.
-A fitness web-application that allows users to search their desired exercises and create a workout for each day of the year.
+This is a fitness web-application that allows users to search their desired exercises and create a workout for each day of the year.
 Users can add sets, repetitions, and edit whether the set is complete or not.
 
 ## Instructions
